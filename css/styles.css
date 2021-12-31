@@ -106,17 +106,49 @@ body {
 }
 
 /* ----------------------РАЗДЕЛ КОНТАКТЫ В НАВИГАЦИИ------------------------------------------------------------------------ */
-.contacts .link {
-  color: var(--text-color);
-  text-decoration: none;
-}
 
 .contacts {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  color: var(--text-color);
 }
-.item-mail::before {
+.item-mail-link,
+.item-phone-link {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.item-mail,
+.item-phone {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.item-mail-icon,
+.item-phone-icon {
+  fill: currentColor;
+}
+
+.item-mail-link:hover,
+.item-mail-link:focus {
+  color: var(--accent-color);
+}
+.item-mail:hover .item-mail-icon,
+.item-mail:focus .item-mail-icon {
+  fill: var(--accent-color);
+}
+.item-phone-link:hover,
+.item-phone-link:focus {
+  color: var(--accent-color);
+}
+.item-phone:hover .item-phone-icon,
+.item-phone:focus .item-phone-icon {
+  fill: var(--accent-color);
+}
+/* .item-mail::before {
   content: "";
   width: 16px;
   height: 12px;
@@ -129,10 +161,10 @@ body {
   content: "";
   width: 10px;
   height: 16px;
-  background-image: url("../img/phone.svg");
+  background-image: url("../img/icons.svg#icon-tel");
   background-size: contain;
   margin-right: 10px;
-}
+} */
 .contacts-nav {
   padding-right: 0;
 }
@@ -147,10 +179,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
 }
 
 /* ----------------------ГЕРОЙ------------------------------------------------------------------------------------------- */
@@ -466,19 +494,19 @@ body {
   background-color: #2f303a;
 }
 .main-footer {
-  /* padding: 60px 0; */
   display: flex;
 }
 .footer-right {
-  padding: 72px 0;
+  align-self: flex-start;
+  padding-top: 72px;
+  padding-bottom: 100px;
   margin-left: 70px;
-  align-items: center;
   justify-content: center;
 }
 .footer-right .title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 0.8px;
+  line-height: 0.9;
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
   margin-bottom: 20px;
