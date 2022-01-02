@@ -116,8 +116,6 @@ body {
 }
 .item-mail-link,
 .item-phone-link {
-  display: flex;
-  align-items: center;
   margin-left: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -131,25 +129,23 @@ body {
 .item-phone-icon {
   fill: currentColor;
   cursor: pointer;
-  /* block-size: 80px; */
   align-self: center;
 }
-
-.item-mail-link:hover,
-.item-mail-link:focus {
+.contacts-border {
+  display: flex;
+  align-items: center;
+}
+.contacts-border:hover,
+.contacts-border:focus {
   color: var(--accent-color);
 }
-.item-mail:hover .item-mail-icon,
-.item-mail:focus .item-mail-icon {
-  fill: var(--accent-color);
-}
-.item-phone-link:hover,
-.item-phone-link:focus {
+.contacts-border:hover .item-mail-link,
+.contacts-border:focus .item-mail-link {
   color: var(--accent-color);
 }
-.item-phone:hover .item-phone-icon,
-.item-phone:focus .item-phone-icon {
-  fill: var(--accent-color);
+.contacts-border:hover .item-phone-link,
+.contacts-border:focus .item-phone-link {
+  color: var(--accent-color);
 }
 
 .contacts .item-mail + .item-phone {
@@ -357,12 +353,15 @@ body {
 .clients-icon {
   fill: currentColor;
 }
-.clients-link:hover,
-.clients-link:focus {
-  color: var(--accent-color);
+
+.clients-border:hover,
+.clients-border:focus {
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+  border-radius: 4px;
 }
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon {
+.clients-border:hover .clients-icon,
+.clients-border:focus .clients-icon {
   fill: var(--accent-color);
 }
 
@@ -372,7 +371,7 @@ body {
   padding-bottom: 94px;
 }
 
-.clients-item {
+.clients-border {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,6 +380,8 @@ body {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+}
+.clients-item {
   margin-right: 30px;
 }
 .clients-item:last-child {
